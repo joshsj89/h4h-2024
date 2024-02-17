@@ -14,8 +14,8 @@ function Map() {
             .importLibrary('maps')
             .then(({ Map }) => {
                 new Map(document.getElementById("map"), {
-                    center: { lat: -34.397, lng: 150.644 },
-                    zoom: 8,
+                    center: { lat: 39.696490, lng: -99.796975 },
+                    zoom: 4,
                 });
             })
             .catch((e) => {
