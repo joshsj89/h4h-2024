@@ -23,10 +23,10 @@ function App() {
         <Route path="get-involved" element={ <GetInvolved/> } />
         <Route path="merchandise" element={ <Merchandise/> } />
       </Routes>
-      <Canvas dpr={[1,2]} shadows camera ={{ fov: 45 }} style={{"position": "absolute"}}>
-        <color attach="background" args={["#101010"]} />
+      <Canvas dpr={[1,2]} shadows camera ={{ fov: 45 }} style={{"position": "absolute", width: "500px", height: "500px"}}>
+        {/* <color attach="background" args={["#101010"]} /> */}
         <PresentationControls speed={1.5} global zoom={.5} polar={[-0.1, Math.PI/4]}>
-          <Stage environment={null}>
+          <Stage environment={"sunset"}>
             <Model scale = {0.007}/>
           </Stage>
         </PresentationControls>
