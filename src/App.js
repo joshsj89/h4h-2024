@@ -5,6 +5,13 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControlProps, PresentationControls } from '@react-three/drei';
+
+function Model(props){
+  const { scene } = useGLTF("/wheelchairv0.glb");
+  return <primitive object={scene} {...props} />
+}
 
 function App() {
   return (
@@ -16,6 +23,14 @@ function App() {
         <Route path="get-involved" element={ <GetInvolved/> } />
         <Route path="merchandise" element={ <Merchandise/> } />
       </Routes>
+      <Canvas dpr={[1,2]} shadows camera ={{ fov: 45 }} style={{"position": "absolute"}}>
+        <color attach="background" args={["#101010"]} />
+        <PresentationControls speed={1.5} global zoom={.5} polar={[-0.1, Math.PI/4]}>
+          <Stage environment={null}>
+            <Model scale = {0.007}/>
+          </Stage>
+        </PresentationControls>
+      </Canvas>
     </div>
   );
 }
