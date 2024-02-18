@@ -9,6 +9,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import {Model} from "../../Components/Model/Model";
 import {Suspense} from "react";
 import TextingTitle from "./TextingTitle";
+import ThreeDLogo from "../../Images/3DLOGO.png";
 
 function Home() {
   return (
@@ -42,21 +43,23 @@ function Home() {
         </section>
       </div>
       <div id="LearnAbout">
-        
-        <Canvas
-          dpr={[1, 2]}
-          shadows
-          camera={{ fov: 2.5 }}
-          style={{ width: "500px", height: "500px" }}
-        >
-          <ambientLight intensity={1.5}/>
-          <Suspense fallback={null}>
-            <Model />
-          </Suspense>
-          <spotLight position={[10,10,10]} angle={.15} penumbra />
-          <Environment preset = "sunset" />
-          <OrbitControls />
-        </Canvas>
+        <div id="CanvasWrapper">
+          <img src={ThreeDLogo} style={{width: '45px'}} alt="3d model of a wheelchairr"></img>
+          <Canvas
+            dpr={[1, 2]}
+            shadows
+            camera={{ fov: 2.5 }}
+            style={{ width: "500px", height: "500px" }}
+          >
+            <ambientLight intensity={1.5}/>
+            <Suspense fallback={null}>
+              <Model />
+            </Suspense>
+            <spotLight position={[10,10,10]} angle={.15} penumbra />
+            <Environment preset = "sunset" />
+            <OrbitControls />
+          </Canvas>
+        </div>
         <section>
           <h1>Learn about the <text>sport</text> and <text>support</text> the cause</h1>
           <p>

@@ -83,7 +83,7 @@ function NavBar({userID, isLoggedIn, setPhoneNumber, setFullName}) {
             if(isLoggedIn) {
                 return (<LogOutButton></LogOutButton>)
             } else {
-                return (<button id="actionButton" onClick={openAccountPopup}> Sign Up (or Log In)</button>)
+                return (<button id="actionButton" onClick={openAccountPopup}> Sign Up </button>)
             }
           })()}
           </li>

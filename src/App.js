@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
+import Checkout from './Pages/Checkout/Checkout';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import React, { useState } from 'react';
@@ -58,6 +59,7 @@ function App() {
         <Route path="about" element={ <About isLoggedIn={isLoggedIn} userID={userID}/> } />
         <Route path="get-involved" element={ <GetInvolved isLoggedIn={isLoggedIn} userID={userID}/> } />
         <Route path="merchandise" element={ <Merchandise isLoggedIn={isLoggedIn} userID={userID}/> } />
+        <Route path="checkout" element={ <Checkout isLoggedIn={isLoggedIn} userID={userID}/> } />
       </Routes>
     </div>
   );
