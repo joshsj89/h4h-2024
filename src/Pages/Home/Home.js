@@ -5,8 +5,9 @@ import { FormNextLink } from "grommet-icons";
 import LiterallyARectangle from "../../Images/LiterallyARectangle.png";
 import ActionThumbnail from "./ActionThumbnail";
 import { Canvas } from "@react-three/fiber";
-import { Stage, PresentationControls } from "@react-three/drei";
-import Model from "../../Components/Model/Model";
+import { Environment, OrbitControls } from "@react-three/drei";
+import {Model} from "../../Components/Model/Model";
+import {Suspense} from "react";
 import TextingTitle from "./TextingTitle";
 
 function Home() {
@@ -45,20 +46,16 @@ function Home() {
         <Canvas
           dpr={[1, 2]}
           shadows
-          camera={{ fov: 45 }}
+          camera={{ fov: 2.5 }}
           style={{ width: "500px", height: "500px" }}
         >
-          {/* <color attach="background" args={["#101010"]} /> */}
-          <PresentationControls
-            speed={1.5}
-            global
-            zoom={0.5}
-            polar={[-0.1, Math.PI / 4]}
-          >
-            <Stage environment = {"night"}>
-              <Model scale={0.007} />
-            </Stage>
-          </PresentationControls>
+          <ambientLight intensity={1.5}/>
+          <Suspense fallback={null}>
+            <Model />
+          </Suspense>
+          <spotLight position={[10,10,10]} angle={.15} penumbra />
+          <Environment preset = "sunset" />
+          <OrbitControls />
         </Canvas>
         <section>
           <h1>Learn about the <text>sport</text> and <text>support</text> the cause</h1>
