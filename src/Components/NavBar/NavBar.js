@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import { useEffect, useState } from "react";
+
 import USPSALogo from "../../Images/USPSALogo.png";
 import { FormNextLink, Menu, Close } from "grommet-icons";
 import AccountPopup from '../SignInPopup/AccountPopup'
@@ -103,6 +103,7 @@ function NavBar({userID, isLoggedIn}) {
           })()}
           </li>
         </ul>
+        <AccountPopup closeAccountPopup={closeAccountPopup} isOpen={popupIsOpen}></AccountPopup>
       </nav>
     </div>
   );
