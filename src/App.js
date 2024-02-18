@@ -5,7 +5,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
-import SignIn from './Pages/SignIn/SignIn';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import React, { useState } from 'react';
@@ -13,8 +12,6 @@ import React, { useState } from 'react';
 import { collection, doc, setDoc } from "firebase/firestore";
 import {db} from './firebase'
 
-import { Canvas } from "@react-three/fiber";
-import { useGLTF, Stage, PresentationControlProps, PresentationControls } from '@react-three/drei';
 
 function App() {
 
@@ -53,10 +50,10 @@ function App() {
     <div className="App">
       <NavBar userID={userID} isLoggedIn={isLoggedIn}/>
       <Routes>
-        <Route path="/" element={ <Home/> } />
-        <Route path="about" element={ <About/> } />
-        <Route path="get-involved" element={ <GetInvolved/> } />
-        <Route path="merchandise" element={ <Merchandise/> } />
+        <Route path="/" element={ <Home isLoggedIn={isLoggedIn} userID={userID}/> } />
+        <Route path="about" element={ <About isLoggedIn={isLoggedIn} userID={userID}/> } />
+        <Route path="get-involved" element={ <GetInvolved isLoggedIn={isLoggedIn} userID={userID}/> } />
+        <Route path="merchandise" element={ <Merchandise isLoggedIn={isLoggedIn} userID={userID}/> } />
       </Routes>
     </div>
   );
