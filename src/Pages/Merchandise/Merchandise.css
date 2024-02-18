@@ -1,3 +1,7 @@
 #MerchandiseContainer{
     color: pink;
 }
+
+#prompt-input {
+    margin-top: 25vh;
+}

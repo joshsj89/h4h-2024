@@ -11,6 +11,10 @@ function AccountPopup({closeAccountPopup, isOpen}) {
         setLoggingIn(true);
     }
 
+    function switchToSignUp() {
+        setLoggingIn(false);
+    }
+
   return (
     <div>
         {isOpen ? (
@@ -23,9 +27,9 @@ function AccountPopup({closeAccountPopup, isOpen}) {
                     }}>Close</button>
                     {(()=> {
                         if(!loggingIn) {
-                            return (<SignUpForm switchToLogin={() => switchToLogin()} closePopup={closeAccountPopup}/>);
+                            return (<SignUpForm switchToLogin={switchToLogin} closePopup={closeAccountPopup}/>);
                         } else {
-                            return (<LogInForm></LogInForm>);
+                            return (<LogInForm switchToSignUp={switchToSignUp}  closePopup={closeAccountPopup}></LogInForm>);
                         }
                     })()}
                 </div>

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../../firebase';
 
-function LogInForm({loginMethod}) {
+function LogInForm({switchToSignUp, closePopup}) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,21 +13,20 @@ function LogInForm({loginMethod}) {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(user);
-            loginMethod(user);
+            closePopup();
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             console.log(errorCode, errorMessage)
         });
-
     }
 
     return(
         <>
             <main>
                 <section>
+                    <button onClick={switchToSignUp}>Back</button>
                     <div>
                         <p> Log In, User! </p>
                         <form>
