@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Stage, PresentationControls } from '@react-three/drei';
 import Model from "../../Components/Model/Model";
 
-function Home() {
+function Home({isLoggedIn, userID}) {
     return (
       <div id="HomeContainer">
         <h1>This is Home</h1>
@@ -19,5 +19,5 @@ function Home() {
       </div>
     );
   }
-  
+
 export default Home;
