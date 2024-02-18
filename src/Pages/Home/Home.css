@@ -33,6 +33,7 @@
 
 #HomeContainer #LearnAbout{
     padding: 8vw;
+    display: flex;
 }
 
 #HomeContainer #LearnAbout section{
