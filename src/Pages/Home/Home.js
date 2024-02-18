@@ -55,7 +55,7 @@ function Home() {
             zoom={0.5}
             polar={[-0.1, Math.PI / 4]}
           >
-            <Stage environment={"sunset"}>
+            <Stage environment = {"night"}>
               <Model scale={0.007} />
             </Stage>
           </PresentationControls>
