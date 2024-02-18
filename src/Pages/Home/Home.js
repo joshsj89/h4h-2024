@@ -7,6 +7,7 @@ import ActionThumbnail from "./ActionThumbnail";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import {Model} from "../../Components/Model/Model";
+import { SignModel } from "../../Components/Model/SignModel";
 import {Suspense} from "react";
 import TextingTitle from "./TextingTitle";
 
