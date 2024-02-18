@@ -6,6 +6,8 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
 import SignIn from './Pages/SignIn/SignIn';
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControlProps, PresentationControls } from '@react-three/drei';
 
 function App() {
   return (
