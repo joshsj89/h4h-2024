@@ -1,3 +1,89 @@
 #GetInvolvedContainer{
-    color: pink;
+
+}
+
+#GetInvolvedContainer p{
+    font-size: 1.2rem;
+    color: white;
+}
+
+#GetInvolvedContainer section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-image: url(../../Images/GetInvolvedBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#GetInvolvedContainer #GetInTouchSummary{
+    width: 30vw;
+    color: white;
+}
+
+#GetInvolvedContainer #GetInTouchSummary h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#GetInvolvedContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#GetInvolvedContainer form div{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#GetInvolvedContainer form div label{
+    margin-bottom: 10px;
+}
+
+#GetInvolvedContainer form div input{
+    width: 30vw;
+    background-color: #14154E;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: solid 4px #656ED3;
+    color: #767676;
+}
+
+#GetInvolvedContainer form div input:focus{
+    background-color: white;
+}
+
+#GetInvolvedContainer form button[type=submit]{
+    background-color: #656ED3;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    align-self: flex-end;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+#GetInvolvedLanding{
+    background-image: url(../../Images/GetInvolvedOtherBackground.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+#GetInvolvedLanding article{
+    text-align: center;
+    width: 40vw;
+}
+
+#GetInvolvedLanding article h1{
+    margin-bottom: 30px;
+    font-size: 3.5rem;
+    color: white;
 }

@@ -5,9 +5,12 @@ import { FormNextLink } from "grommet-icons";
 import LiterallyARectangle from "../../Images/LiterallyARectangle.png";
 import ActionThumbnail from "./ActionThumbnail";
 import { Canvas } from "@react-three/fiber";
-import { Stage, PresentationControls } from "@react-three/drei";
-import Model from "../../Components/Model/Model";
+import { Environment, OrbitControls } from "@react-three/drei";
+import {Model} from "../../Components/Model/Model";
+import { SignModel } from "../../Components/Model/SignModel";
+import {Suspense} from "react";
 import TextingTitle from "./TextingTitle";
+import ThreeDLogo from "../../Images/3DLOGO.png";
 
 function Home() {
   return (
@@ -16,7 +19,7 @@ function Home() {
         <section>
           <div>
             <p>
-              Power Soccer
+              U.S. Power Soccer
               <img
                 style={{ margin: "0 0 0 10px" }}
                 src={LiterallyARectangle}
@@ -41,27 +44,25 @@ function Home() {
         </section>
       </div>
       <div id="LearnAbout">
-        
-        <Canvas
-          dpr={[1, 2]}
-          shadows
-          camera={{ fov: 45 }}
-          style={{ width: "500px", height: "500px" }}
-        >
-          {/* <color attach="background" args={["#101010"]} /> */}
-          <PresentationControls
-            speed={1.5}
-            global
-            zoom={0.5}
-            polar={[-0.1, Math.PI / 4]}
+        <div id="CanvasWrapper">
+          <img src={ThreeDLogo} style={{width: '45px'}} alt="3d model of a wheelchairr"></img>
+          <Canvas
+            dpr={[1, 2]}
+            shadows
+            camera={{ fov: 2.5 }}
+            style={{ width: "500px", height: "500px" }}
           >
-            <Stage environment = {"night"}>
-              <Model scale={0.007} />
-            </Stage>
-          </PresentationControls>
-        </Canvas>
+            <ambientLight intensity={1.5}/>
+            <Suspense fallback={null}>
+              <Model />
+            </Suspense>
+            <spotLight position={[10,10,10]} angle={.15} penumbra />
+            <Environment preset = "sunset" />
+            <OrbitControls />
+          </Canvas>
+        </div>
         <section>
-          <h1>Learn about the sport and support the cause</h1>
+          <h1>Learn about the <text>sport</text> and <text>support</text> the cause</h1>
           <p>
             Power soccer is the first competitive team sport designed and
             developed specifically for power wheelchair users. Athletes'
