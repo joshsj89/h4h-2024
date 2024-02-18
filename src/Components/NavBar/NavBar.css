@@ -1,3 +1,78 @@
 #NavBar{
-    color: pink;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.mobileMenu{
+    display: none;
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
+}
+
+#NavBar nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+}
+
+#NavBar img{
+    width: max(5vw, 100px);
+}
+
+/* good */
+#NavBar .NavLink{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    margin-left: 20px;
+}
+
+/* good */
+#NavBar .NavLink:hover{
+    text-decoration: underline;
+}
+
+/* good */
+#actionButton{
+    background-image: linear-gradient(to right, rgba(248, 80, 110, 1) , rgba(112, 90, 242, 1));
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .mobileMenu{
+        display: flex;
+        padding: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: fit-content;
+        background-color:linear-gradient(to right, rgba(248, 80, 110, 1) , rgba(112, 90, 242, 1));
+        border-radius: 50%;
+    }
+    #NavBar nav ul{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        margin-top: 40px;
+        background-color: #F8F7F4;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+    #NavBar nav ul.openSmallBar{
+        display: flex;
+    }
 }

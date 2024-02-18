@@ -1,0 +1,17 @@
+#ActionThumbnailContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3vw;
+    width: 20vw;
+    background-color: white;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#ActionThumbnailContainer > * {
+    margin-bottom: 20px;
+}
+
+#ActionThumbnailContainer:last-child{
+}

@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
+import SignIn from './Pages/SignIn/SignIn';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={ <About/> } />
         <Route path="get-involved" element={ <GetInvolved/> } />
         <Route path="merchandise" element={ <Merchandise/> } />
+        <Route path="sign-in" element={ <SignIn/> } />
       </Routes>
     </div>
   );

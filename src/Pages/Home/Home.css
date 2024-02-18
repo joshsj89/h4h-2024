@@ -1,3 +1,74 @@
-#HomeContainer{
-    color: pink;
+#HomeContainer p{
+    font-size: 1.2rem;
+}
+
+#HomeContainer #LandingSection section div p{
+    display: flex;
+    align-items: center;
+}
+
+#HomeContainer #LandingSection{
+    height: 100vh;
+    background-image: url("../../Images/BackgroundImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    padding: 8vw;
+}
+
+#HomeContainer #LandingSection section{
+    width: max(30vw, 300px);
+}
+
+#HomeContainer #LandingSection section > * {
+    margin-bottom: 30px;
+}
+
+#HomeContainer #LandingSection h1{
+    font-size: 3rem;
+}
+
+#HomeContainer #LearnAbout{
+    padding: 8vw;
+}
+
+#HomeContainer #LearnAbout section{
+    width: 40vw;
+    color: white;
+}
+
+#HomeContainer #LearnAbout h1{
+    font-size: 3rem;
+}
+
+#HomeContainer #LearnAbout section > * {
+    margin-bottom: 30px;
+}
+
+#LearnMoreButton{
+    background-color: #8DD6D6;
+    padding: 10px 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#ThumbnailAction{
+    background-image: url(../../Images/ThumbnailBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+
+#ThumbnailAction section{
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw;
 }
