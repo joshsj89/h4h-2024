@@ -149,7 +149,8 @@ function Merchandise() {
           <div id="chair-view-container">
 
           </div>
-          <NavLink><div id="checkout-button" onClick="">Checkout</div></NavLink>
+          {isComplete ? <div style={{position: "fixed", bottom: "2vh", right: "2vh", backgroundColor: "white", padding: "20px", borderRadius: "10px"}}><NavLink class="NaviLink" to="/checkout">Checkout</NavLink></div> : <></>}
+
 
         </div>
       </div>
