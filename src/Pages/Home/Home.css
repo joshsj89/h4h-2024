@@ -46,6 +46,11 @@
     font-size: 3rem;
 }
 
+#HomeContainer #LearnAbout h1 text{
+    color: #8DD6D6;
+    font-style: italic;
+}
+
 #HomeContainer #LearnAbout section > * {
     margin-bottom: 30px;
 }
@@ -60,6 +65,7 @@
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 #ThumbnailAction{

@@ -4,11 +4,22 @@
     left: 30vw;
     z-index: 111;
     width: 40vw;
-    height: 60vh;
-    background-color: rgb(186, 186, 186);
+    height: fit-content;
+    background-color: white;
     border-radius: 25px;
-
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sign-in-container #popUpCloseButton{
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 #curtain {
@@ -26,3 +37,53 @@
       width: 100%; /* Change width to 100% for mobile devices */
     }
   }
+
+#SignUpFormContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#SignUpFormContainer form div{
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+#SignUpFormContainer form label{
+  font-size: 0.8rem;
+  color: darkgray;
+}
+
+#submitSignUpButton{
+  width: 300px;
+  background-color: #1C1C4E;
+  height: 35px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#SignUpFormContainer form input{
+  background: white;
+  width: 300px;
+  height: 35px;
+  border: solid lightgray;
+  padding: 10px;
+}
+
+#SwitchToLoginButton{
+  background:none;
+  border:none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #1C1C4E;
+  text-decoration: underline;
+}

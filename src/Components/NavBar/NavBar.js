@@ -6,7 +6,7 @@ import { Menu, Close } from "grommet-icons";
 import AccountPopup from '../SignInPopup/AccountPopup'
 import LogOutButton from "../LogOutButton/LogOutButton";
 
-function NavBar({userID, isLoggedIn}) {
+function NavBar({userID, isLoggedIn, setPhoneNumber, setFullName}) {
   const [scrollDown, setScrollDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [popupIsOpen, setPopupIsOpen] = useState(false);
@@ -88,7 +88,7 @@ function NavBar({userID, isLoggedIn}) {
           })()}
           </li>
         </ul>
-        <AccountPopup closeAccountPopup={closeAccountPopup} isOpen={popupIsOpen}></AccountPopup>
+        <AccountPopup closeAccountPopup={closeAccountPopup} isOpen={popupIsOpen} setPhoneNumber={setPhoneNumber} setFullName={setFullName}></AccountPopup>
       </nav>
     </div>
   );

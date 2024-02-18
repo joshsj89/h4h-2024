@@ -16,7 +16,7 @@ function Home() {
         <section>
           <div>
             <p>
-              Power Soccer
+              U.S. Power Soccer
               <img
                 style={{ margin: "0 0 0 10px" }}
                 src={LiterallyARectangle}
@@ -61,7 +61,7 @@ function Home() {
           </PresentationControls>
         </Canvas>
         <section>
-          <h1>Learn about the sport and support the cause</h1>
+          <h1>Learn about the <text>sport</text> and <text>support</text> the cause</h1>
           <p>
             Power soccer is the first competitive team sport designed and
             developed specifically for power wheelchair users. Athletes'
