@@ -66,7 +66,7 @@ function SignUpForm({switchToLogin, closePopup}) {
                 Sign up
             </button>
         </form>
-        <button onClick={switchToLogin}>Already Have an Account? Click Here to Login.</button>
+        <button onClick={() => switchToLogin()}>Already Have an Account? Click Here to Login.</button>
         </div>
     )
 }

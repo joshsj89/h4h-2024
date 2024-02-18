@@ -49,7 +49,7 @@ function NavBar({userID, isLoggedIn}) {
           <li>
             <Link
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              className="NavLink"
               to="/"
             >
               Home
@@ -58,7 +58,7 @@ function NavBar({userID, isLoggedIn}) {
           <li>
             <Link
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              className="NavLink"
               to="about"
             >
               About
@@ -67,7 +67,7 @@ function NavBar({userID, isLoggedIn}) {
           <li>
             <Link
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              className="NavLink"
               to="get-involved"
             >
               Get Involved
@@ -76,7 +76,7 @@ function NavBar({userID, isLoggedIn}) {
           <li>
             <Link
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              className="NavLink"
               to="merchandise"
             >
               Merchandise
