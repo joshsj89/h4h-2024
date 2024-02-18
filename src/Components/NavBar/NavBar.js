@@ -44,7 +44,7 @@ function NavBar({userID, isLoggedIn}) {
       <Link to="/">
         {(!scrollDown && !menuOpen) && <img src={USPSALogo} alt="USPSA Logo"></img>}
       </Link>
-      <nav>
+      <nav className={scrollDown ? "hoverColor" : ""}>
         <ul className={menuOpen ? "openSmallBar" : ""}>
           <li>
             <Link
@@ -83,22 +83,11 @@ function NavBar({userID, isLoggedIn}) {
             </Link>
           </li>
           <li>
-            <Link
-              onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
-              to="sign-in"
-              id="actionButton"
-            >
-              Sign In
-              <FormNextLink color="white" />
-            </Link>
-          </li>
-          <li>
           {(()=> {
             if(isLoggedIn) {
                 return (<LogOutButton></LogOutButton>)
             } else {
-                return (<button onClick={openAccountPopup}> Sign Up (or Log In)</button>)
+                return (<button id="actionButton" onClick={openAccountPopup}> Sign Up (or Log In)</button>)
             }
           })()}
           </li>

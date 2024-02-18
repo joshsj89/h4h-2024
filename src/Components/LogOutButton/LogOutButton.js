@@ -1,6 +1,7 @@
 import React from 'react';
 import './LogOutButton.css';
 import { getAuth, signOut } from "firebase/auth";
+import "../NavBar/NavBar.css";
 
 function LogOutButton() {
     const auth = getAuth();
@@ -14,7 +15,7 @@ function LogOutButton() {
     }
 
     return (
-        <button onClick={handleLogout}>Log Out</button>
+        <button id="actionButton" onClick={handleLogout}>Log Out</button>
     )
 }
 

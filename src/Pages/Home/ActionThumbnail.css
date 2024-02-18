@@ -1,17 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
 #ActionThumbnailContainer{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+    border: solid black 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    width: 20vw;
+    padding: 3vw;
+}
+#ActionThumbnailContainer article{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 3vw;
-    width: 20vw;
-    background-color: white;
     align-items: center;
     justify-content: flex-start;
 }
 
-#ActionThumbnailContainer > * {
+#ActionThumbnailContainer article p{
+    font-family: "Montagu Slab", serif;
+}
+
+#ActionThumbnailContainer article > * {
     margin-bottom: 20px;
 }
 
-#ActionThumbnailContainer:last-child{
+#ActionThumbnailContainer a{
+    text-align: center;
+    align-self: center;
 }

@@ -39,6 +39,7 @@
 #HomeContainer #LearnAbout section{
     width: 40vw;
     color: white;
+    margin-left: 100px;
 }
 
 #HomeContainer #LearnAbout h1{
