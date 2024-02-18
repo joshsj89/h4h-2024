@@ -1,0 +1,105 @@
+.color-selector-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.selected {
+    border: 5px solid rgb(95, 95, 95);
+}
+
+#colors-container {
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#color-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    transition: left 0.5s ease-in-out;
+}
+
+#back-container {
+    height: 20%
+}
+
+#size-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    transition: left 0.5s ease-in-out;
+}
+
+#sizes-container {
+    display: flex;
+    padding-top: 25px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.size-selector-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.size-selector-option:hover {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.size-selected {
+    border: 5px solid rgb(0, 0, 0);
+}
+
+#number-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    transition: left 0.5s ease-in-out;
+}
+
+#numbers-selector {
+    margin-top: 20px;
+    width: 60px;
+    height: 40px;
+    font-size: 2rem;
+}
+
+#numbers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#team-name-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    transition: left 0.5s ease-in-out;
+}
+
+#team-name-selector {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+}

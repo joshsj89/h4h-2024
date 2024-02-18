@@ -1,7 +1,178 @@
 #MerchandiseContainer{
-    color: pink;
+    padding-top: 15vh;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
+#graphic-view-container {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+}
+
+#t-shirt-view-container {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 70vh;
+}
+
+#t-shirt-image {
+    height: 100%;
+}
+
+#t-shirt-logo {
+    position: absolute;
+    top: 130px;
+    left: 150px;
+    height: 150px;
+    z-index: 111;
+}
+
+#loading-container {
+    position: absolute;
+    top: 80px;
+    left: 70px;
+    height:200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 1111;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 2vh;
+    background-color: rgb(218, 92, 113);
+    margin-top: 190px;
+}
+
+#flavor-text {
+    position: absolute;
+    top:75%;
+    left: 10%;
+    margin: auto;
+}
+
+#loading-spinner {
+    height: 50%;
+    position: absolute;
+    left: 100px;
+    margin-top: 20px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start rotating from 0 degrees */
+    100% { transform: rotate(360deg); } /* End rotating at 360 degrees (full circle) */
+  }
+
 #prompt-input {
-    margin-top: 25vh;
+
+}
+
+#graphic-type-selector-container {
+    margin: auto;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 3.5vh;
+    background-color: rgb(25, 0, 75);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#selected-type {
+    width: 7.5vw;
+    height: 7vh;
+    border-radius: 3.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+#unselected-type {
+    width: 7.5vw;
+    height: 7vh;
+    border-radius: 3.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    transition: font-weight 0.5s ease-in-out;
+    font-weight: 0;
+}
+
+#selected-icon {
+    width: 7.5vw;
+    height: 7vh;
+    border-radius: 3.5vh;
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(245, 115, 115));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    transition: left 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#t-shirt-editor-container {
+
+}
+
+#form-container {
+    width: 35vw;
+    height: 35vh;
+    border-radius: 25px;
+    background-color: rgb(230, 230, 230);
+    margin-left: 3vw;
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    position: relative;
+}
+
+#back-container {
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 1vh;
+}
+
+#current-form-container {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+#next-button-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#next-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(69, 16, 148);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    height: 2.6rem;
 }
