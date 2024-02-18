@@ -6,7 +6,9 @@ function GetInvolved() {
     return (
       <div id="GetInvolvedContainer">
         <h1>This is Get Involved</h1>
-        <Map />
+        <div className="map-container">
+          <Map />
+        </div>
       </div>
     );
   }
