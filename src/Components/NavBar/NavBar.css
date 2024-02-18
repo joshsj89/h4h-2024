@@ -3,9 +3,15 @@
     position: fixed;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 25px;
+}
+
+.active{
+    color: #F3B8BA;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .mobileMenu{
@@ -31,7 +37,7 @@
 }
 
 /* good */
-#NavBar .NavLink{
+#NavBar li a{
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -40,7 +46,7 @@
 }
 
 /* good */
-#NavBar .NavLink:hover{
+#NavBar li .NaviLink:hover{
     text-decoration: underline;
 }
 

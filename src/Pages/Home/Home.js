@@ -7,6 +7,7 @@ import ActionThumbnail from "./ActionThumbnail";
 import { Canvas } from "@react-three/fiber";
 import { Stage, PresentationControls } from "@react-three/drei";
 import Model from "../../Components/Model/Model";
+import TextingTitle from "./TextingTitle";
 
 function Home() {
   return (
@@ -23,7 +24,7 @@ function Home() {
               ></img>
             </p>
           </div>
-          <h1>MORE THAN JUST A SPORT</h1>
+          <h1>MORE THAN JUST A <section><TextingTitle /></section></h1>
           <p>
             Power soccer isn’t just a game. It’s a way of life. For the coaches,
             athletes, staff, and volunteers, power soccer builds lifelong
@@ -40,6 +41,7 @@ function Home() {
         </section>
       </div>
       <div id="LearnAbout">
+        
         <Canvas
           dpr={[1, 2]}
           shadows

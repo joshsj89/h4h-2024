@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-import USPSALogo from "../../Images/USPSALogo.png";
-import { FormNextLink, Menu, Close } from "grommet-icons";
+import { Menu, Close } from "grommet-icons";
 import AccountPopup from '../SignInPopup/AccountPopup'
 import LogOutButton from "../LogOutButton/LogOutButton";
 
@@ -41,46 +40,43 @@ function NavBar({userID, isLoggedIn}) {
       <div className="mobileMenu" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <Close color="white" /> : <Menu color="white" />}
       </div>
-      <Link to="/">
-        {(!scrollDown && !menuOpen) && <img src={USPSALogo} alt="USPSA Logo"></img>}
-      </Link>
       <nav className={scrollDown ? "hoverColor" : ""}>
         <ul className={menuOpen ? "openSmallBar" : ""}>
           <li>
-            <Link
+            <NavLink
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              class="NaviLink"
               to="/"
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              class="NaviLink"
               to="about"
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              class="NaviLink"
               to="get-involved"
             >
               Get Involved
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               onClick={() => setMenuOpen((menuOpen) => !menuOpen)}
-              class="NavLink"
+              class="NaviLink"
               to="merchandise"
             >
               Merchandise
-            </Link>
+            </NavLink>
           </li>
           <li>
           {(()=> {
