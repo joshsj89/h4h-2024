@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { useEffect, useState } from "react";
 import USPSALogo from "../../Images/USPSALogo.png";
 import { FormNextLink, Menu, Close } from "grommet-icons";
+import AccountPopup from '../SignInPopup/AccountPopup'
+import LogOutButton from "../LogOutButton/LogOutButton";
 
-function NavBar() {
+function NavBar({userID, isLoggedIn}) {
   const [scrollDown, setScrollDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -23,6 +26,15 @@ function NavBar() {
 
   //scrollDown: did we scroll down
   //menuopen: did we click to open it
+
+  function openAccountPopup() {
+    setPopupIsOpen(true);
+    console.log(isLoggedIn);
+  }
+
+  function closeAccountPopup() {
+    setPopupIsOpen(false);
+  }
 
   return (
     <div id="NavBar">
@@ -80,6 +92,15 @@ function NavBar() {
               Sign In
               <FormNextLink color="white" />
             </Link>
+          </li>
+          <li>
+          {(()=> {
+            if(isLoggedIn) {
+                return (<LogOutButton></LogOutButton>)
+            } else {
+                return (<button onClick={openAccountPopup}> Sign Up (or Log In)</button>)
+            }
+          })()}
           </li>
         </ul>
       </nav>

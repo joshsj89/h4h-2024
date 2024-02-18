@@ -1,0 +1,28 @@
+#sign-in-container {
+    position: fixed;
+    top:10vh;
+    left: 30vw;
+    z-index: 111;
+    width: 40vw;
+    height: 60vh;
+    background-color: rgb(186, 186, 186);
+    border-radius: 25px;
+
+    color: black;
+}
+
+#curtain {
+    background-color: rgba(72, 72, 72, 0.69);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #sign-in-container {
+      width: 100%; /* Change width to 100% for mobile devices */
+    }
+  }
