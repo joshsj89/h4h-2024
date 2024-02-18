@@ -5,12 +5,15 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NavBar from './Components/NavBar/NavBar';
+
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import React, { useState } from 'react';
 
 import { collection, doc, setDoc } from "firebase/firestore";
 import {db} from './firebase'
 
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControlProps, PresentationControls } from '@react-three/drei';
 
 function App() {
 
