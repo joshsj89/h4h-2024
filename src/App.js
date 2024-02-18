@@ -17,6 +17,8 @@ function App() {
 
   const auth = getAuth();
 
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [fullName, setFullName] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userID, setUserID] = useState('');
 
@@ -34,6 +36,8 @@ function App() {
 
         await setDoc(docRef, {
           email: user.email,
+          phoneNumber: phoneNumber,
+          fullName: fullName,
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
@@ -48,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar userID={userID} isLoggedIn={isLoggedIn}/>
+      <NavBar userID={userID} isLoggedIn={isLoggedIn} setPhoneNumber={setPhoneNumber} setFullName={setFullName}/>
       <Routes>
         <Route path="/" element={ <Home isLoggedIn={isLoggedIn} userID={userID}/> } />
         <Route path="about" element={ <About isLoggedIn={isLoggedIn} userID={userID}/> } />

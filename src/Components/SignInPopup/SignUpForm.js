@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 import { auth } from '../../firebase';
+import USPSALogo from "../../Images/USPSALogo.png";
 import './SignUpForm.css';
 
-function SignUpForm({switchToLogin, closePopup}) {
+function SignUpForm({switchToLogin, closePopup, setPhoneNumber, setFullName}) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [newFullName, setNewFullName] = useState('');
+    const [newPhoneNumber, setNewPhoneNumber] = useState('');
 
     const onSubmit = async (e) => {
       e.preventDefault()
@@ -17,6 +20,8 @@ function SignUpForm({switchToLogin, closePopup}) {
             // Signed in successfully
             const user = userCredential.user;
             console.log(user);
+            setPhoneNumber(newPhoneNumber);
+            setFullName(newFullName);
             closePopup();
         })
         .catch((error) => {
@@ -28,9 +33,24 @@ function SignUpForm({switchToLogin, closePopup}) {
     }
 
   return (
-    <div>
+    <div id="SignUpFormContainer">
+        <img src={USPSALogo} alt="USPSA Logo"></img>
         <h1> Create User </h1>
         <form>
+            <div>
+                <label htmlFor="full-name">
+                    Full Name
+                </label>
+                <input
+                    type="text"
+                    label="Full Name"
+                    value={newFullName}
+                    onChange={(e) => setNewFullName(e.target.value)}
+                    required
+                    placeholder="Full Name"
+                />
+            </div>
+
             <div>
                 <label htmlFor="email-address">
                     Email address
@@ -42,6 +62,20 @@ function SignUpForm({switchToLogin, closePopup}) {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="Email address"
+                />
+            </div>
+
+            <div>
+                <label htmlFor="phone-number">
+                    Phone Number
+                </label>
+                <input
+                    type="tel"
+                    label="Phone Number"
+                    value={newPhoneNumber}
+                    onChange={(e) => setNewPhoneNumber(e.target.value)}
+                    required
+                    placeholder="(XXX)XXX-XXXX"
                 />
             </div>
 
@@ -62,11 +96,12 @@ function SignUpForm({switchToLogin, closePopup}) {
             <button
                 type="submit"
                 onClick={onSubmit}
+                id="submitSignUpButton"
             >
-                Sign up
+                Sign Up
             </button>
         </form>
-        <button onClick={() => switchToLogin()}>Already Have an Account? Click Here to Login.</button>
+        <text>Already Have an Account? <button id="SwitchToLoginButton" onClick={() => switchToLogin()}>Click Here to Login.</button></text>
         </div>
     )
 }

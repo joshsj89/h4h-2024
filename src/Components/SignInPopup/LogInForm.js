@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
 import { auth } from '../../firebase';
+import USPSALogo from "../../Images/USPSALogo.png";
 
 function LogInForm({switchToSignUp, closePopup}) {
 
@@ -26,9 +27,9 @@ function LogInForm({switchToSignUp, closePopup}) {
         <>
             <main>
                 <section>
-                    <button onClick={switchToSignUp}>Back</button>
-                    <div>
-                        <p> Log In, User! </p>
+                    <div id="SignUpFormContainer">
+                        <img src={USPSALogo} alt="USPSA Logo"></img>
+                        <h1> Log In, User! </h1>
                         <form>
                             <div>
                                 <label htmlFor="email-address">
@@ -61,6 +62,7 @@ function LogInForm({switchToSignUp, closePopup}) {
                             <div>
                                 <button
                                     onClick={onLogin}
+                                    id="submitSignUpButton"
                                 >
                                     Login
                                 </button>
